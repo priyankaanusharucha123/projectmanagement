@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>सामर्थ्य - Saamarthya</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f3f2f1;
+            color: #323130;
+        }
+ 
+        .hero-section {
+            background: linear-gradient(135deg, rgba(0, 76, 151, 0.95), rgba(0, 120, 212, 0.9)), 
+                        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            padding: 30px 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+ 
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+ 
+        .hero-title {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+ 
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: #e3f2fd;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+ 
+        .hero-description {
+            font-size: 1.2rem;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+ 
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+ 
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 0px 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #0078d4;
+        }
+ 
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+ 
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #0078d4;
+        }
+ 
+        .feature-title {
+            font-size: 1.5rem;
+            color: #323130;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+ 
+        .feature-description {
+            color: #605e5c;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+ 
+        .cta-section {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+ 
+        .cta-title {
+            font-size: 2rem;
+            color: #323130;
+            margin-bottom: 30px;
+        }
+ 
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+ 
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+ 
+        .btn-primary {
+            background: #0078d4;
+            color: white;
+        }
+ 
+        .btn-primary:hover {
+            background: #106ebe;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,120,212,0.3);
+        }
+ 
+        .btn-secondary {
+            background: white;
+            color: #0078d4;
+            border: 2px solid #0078d4;
+        }
+ 
+        .btn-secondary:hover {
+            background: #f3f2f1;
+        }
+ 
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+ 
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+ 
+        .stat-number {
+            font-size: 2.5rem;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+ 
+        .stat-label {
+            color: #e3f2fd;
+            font-size: 1rem;
+        }
+ 
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+ 
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+ 
+            .hero-description {
+                font-size: 1rem;
+            }
+ 
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+</style>
+</head>
+<body>
+<div class="hero-section">
+<div class="hero-content">
+<h1 class="hero-title">Welcome to सामर्थ्य</h1>
+<p class="hero-subtitle">Performance. Potential. Precision</p>
+<p class="hero-description">
+                Experience a platform dedicated to driving delivery excellence and strengthening PMO governance. 
+                Integrates assessments, feedback, and governance. Engineered for clarity, scalability, and responsibility.
+</p>
+<!-- <div class="stats-section">
+<div class="stat-box">
+<div class="stat-number">100+</div>
+<div class="stat-label">Active Projects</div>
+</div>
+<div class="stat-box">
+<div class="stat-number">27</div>
+<div class="stat-label">Team Members</div>
+</div>
+<div class="stat-box">
+<div class="stat-number">95%</div>
+<div class="stat-label">Success Rate</div> -->
+</div>
+</div>
+</div>
+</div>
+ 
+    <div class="features-grid">
+<div class="feature-card" >
+<div class="feature-icon">📊</div>
+<h3 class="feature-title">Delivery Enablement Programme</h3>
+<p class="feature-description">
+                Streamline project delivery with structured frameworks, best practices, and proven methodologies. 
+                Track progress, identify bottlenecks, and ensure successful outcomes.
+</p>
+</div>
+ 
+        <div class="feature-card">
+<div class="feature-icon">🎯</div>
+<h3 class="feature-title">PMO Excellence</h3>
+<p class="feature-description">
+                Strengthen governance with comprehensive PMO tools. Monitor compliance, manage risks, 
+                and maintain strategic alignment across all initiatives.
+</p>
+</div>
+ 
+        <div class="feature-card">
+<div class="feature-icon">📈</div>
+<h3 class="feature-title">Integrated Assessments</h3>
+<p class="feature-description">
+                Conduct thorough project health checks, maturity assessments, and capability evaluations. 
+                Get actionable insights to drive continuous improvement.
+</p>
+</div>
+ 
+        <!-- <div class="feature-card">
+<div class="feature-icon">💬</div>
+<h3 class="feature-title">Feedback & Collaboration</h3>
+<p class="feature-description">
+                Foster transparent communication with built-in feedback mechanisms. 
+                Enable teams to share insights and collaborate effectively across projects.
+</p>
+</div>
+ 
+        <div class="feature-card">
+<div class="feature-icon">🔍</div>
+<h3 class="feature-title">Governance Framework</h3>
+<p class="feature-description">
+                Establish clear accountability with robust governance structures. 
+                Ensure compliance, manage approvals, and maintain audit trails.
+</p>
+</div>
+ 
+        <div class="feature-card">
+<div class="feature-icon">⚡</div>
+<h3 class="feature-title">Scalable Solutions</h3>
+<p class="feature-description">
+                Built to grow with your organization. Handle increasing complexity while maintaining 
+                clarity and operational efficiency at every level.
+</p>
+</div>
+</div> -->
+ 
+    <!-- <div class="cta-section">
+<h2 class="cta-title">Ready to Transform Your PMO?</h2>
+<div class="cta-buttons">
+<a href="#" class="btn btn-primary">Get Started</a>
+<a href="#" class="btn btn-secondary">Learn More</a>
+</div> -->
+</div>
+</body>
+</html>
